@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">ProgrammersKeyboard</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="c601" formatted="true">
+        for(;;){
+        }
+    </string>
+    <string name="cur601" formatted="true">
+        6
+    </string>
+    <string name="c602" formatted="true">
+        for(:){
+        }
+    </string>
+    <string name="c603" formatted="true">
+        while(){
+        }
+    </string>
+    <string name="c604" formatted="true">
+        do{
+        }while();
+    </string>
+    <string name="c701" formatted="true">
+        if(){
+        }
+    </string>
+    <string name="c702" formatted="true">
+        if(){
+        }
+        else{
+        }
+    </string>
+    <string name="c703" formatted="true">
+        switch(){
+        default:
+        }
+    </string>
+    <string name="c801" formatted="true">
+        int i = 0;
+    </string>
+    <string name="c802" formatted="true">
+        i++;
+    </string>
+    <string name="c803" formatted="true">
+        i--;
+    </string>
+</resources>
