@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <service
-            android:name=".MyInputMethodService"
+            android:name=".ProgrammerKeyboardService"
             android:permission="android.permission.BIND_INPUT_METHOD">
             <meta-data
                 android:name="android.view.im"

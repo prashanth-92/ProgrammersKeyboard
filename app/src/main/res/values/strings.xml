@@ -1,47 +1,94 @@
 <resources>
     <string name="app_name">ProgrammersKeyboard</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="c601" formatted="true">
-        for(;;){
-        }
-    </string>
-    <string name="cur601" formatted="true">
-        6
-    </string>
-    <string name="c602" formatted="true">
-        for(:){
-        }
-    </string>
-    <string name="c603" formatted="true">
-        while(){
-        }
-    </string>
-    <string name="c604" formatted="true">
-        do{
-        }while();
-    </string>
-    <string name="c701" formatted="true">
-        if(){
-        }
-    </string>
-    <string name="c702" formatted="true">
-        if(){
-        }
-        else{
-        }
-    </string>
-    <string name="c703" formatted="true">
-        switch(){
-        default:
-        }
-    </string>
-    <string name="c801" formatted="true">
-        int i = 0;
-    </string>
-    <string name="c802" formatted="true">
-        i++;
-    </string>
-    <string name="c803" formatted="true">
-        i--;
-    </string>
+    <string-array name="c601">
+        <item name="cursorPosition">
+            6
+        </item>
+        <item name="code">
+            for(;;){
+            }
+        </item>
+    </string-array>
+    <string-array name="c602">
+        <item name="cursorPosition">
+            5
+        </item>
+        <item name="code">
+            for(:){
+            }
+        </item>
+    </string-array>
+    <string-array name="c603">
+        <item name="cursorPosition">
+            4
+        </item>
+        <item name="code">
+            while(){
+            }
+        </item>
+    </string-array>
+    <string-array name="c604">
+        <item name="cursorPosition">
+            9
+        </item>
+        <item name="code">
+            do{
+            }while()
+        </item>
+    </string-array>
+    <string-array name="c701">
+        <item name="cursorPosition">
+            4
+        </item>
+        <item name="code">
+            if(){
+            }
+        </item>
+    </string-array>
+    <string-array name="c702">
+        <item name="cursorPosition">
+            12
+        </item>
+        <item name="code">
+            if(){
+            }
+            else{
+            }
+        </item>
+    </string-array>
+    <string-array name="c703">
+        <item name="cursorPosition">
+            13
+        </item>
+        <item name="code">
+            switch(){
+                default:
+            }
+        </item>
+    </string-array>
+    <string-array name="c801">
+        <item name="cursorPosition">
+            0
+        </item>
+        <item name="code">
+            int i = 0;
+        </item>
+    </string-array>
+    <string-array name="c802">
+        <item name="cursorPosition">
+            0
+        </item>
+        <item name="code">
+            i++;
+        </item>
+    </string-array>
+    <string-array name="c803">
+        <item name="cursorPosition">
+            0
+        </item>
+        <item name="code">
+            i--;
+        </item>
+    </string-array>
 </resources>

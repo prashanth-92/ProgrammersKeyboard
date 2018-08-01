@@ -8,10 +8,27 @@
     android:verticalGap="3px">
     <Row>
         <Key
+            android:codes="901"
+            android:keyEdgeFlags="left"
+            android:keyIcon="@drawable/left"
+            android:keyWidth="20%p"></Key>
+        <Key
+            android:codes="902"
+            android:keyIcon="@drawable/up"
+            android:keyWidth="20%p"></Key>
+        <Key
+            android:codes="903"
+            android:keyIcon="@drawable/down"
+            android:keyWidth="20%p"></Key>
+        <Key
+            android:codes="904"
+            android:keyIcon="@drawable/right"
+            android:keyWidth="20%p"></Key>
+        <Key
             android:codes="-5"
             android:isRepeatable="true"
             android:keyEdgeFlags="right"
-            android:keyLabel="DEL"
+            android:keyLabel="Delete"
             android:keyWidth="20%p" />
     </Row>
     <Row>
@@ -63,7 +80,7 @@
             android:keyEdgeFlags="right"
             android:keyLabel="i--"></Key>
     </Row>
-    <Row>
+    <Row android:rowEdgeFlags="bottom">
         <Key
             android:codes="32"
             android:isRepeatable="true"
@@ -73,23 +90,7 @@
             android:codes="-4"
             android:keyBackground="@color/colorPrimary"
             android:keyEdgeFlags="right"
-            android:keyLabel="DONE"
+            android:keyLabel="Done"
             android:keyWidth="20%p" />
-    </Row>
-    <Row android:rowEdgeFlags="bottom">
-        <Key
-            android:codes="901"
-            android:keyEdgeFlags="left"
-            android:keyLabel="L"></Key>
-        <Key
-            android:codes="902"
-            android:keyLabel="U"></Key>
-        <Key
-            android:codes="903"
-            android:keyLabel="D"></Key>
-        <Key
-            android:codes="904"
-            android:keyEdgeFlags="right"
-            android:keyLabel="R"></Key>
     </Row>
 </Keyboard>

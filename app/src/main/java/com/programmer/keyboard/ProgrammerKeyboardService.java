@@ -15,10 +15,13 @@ import java.lang.reflect.Field;
  * Created by prashanthramakrishnan on 27/07/18.
  */
 
-public class MyInputMethodService extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
+public class ProgrammerKeyboardService extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
 
     private final String KEY_PREFIX = "c";
-    private final String KEY_CUR_PREFIX = "cur";
+    private final int LEFT_KEYCODE = 901;
+    private final int UP_KEYCODE = 902;
+    private final int DOWN_KEYCODE = 903;
+    private final int RIGHT_KEYCODE = 904;
     private KeyboardView keyboardView;
     private Keyboard keyboard;
 
@@ -44,39 +47,44 @@ public class MyInputMethodService extends InputMethodService implements Keyboard
     @Override
     public void onKey(int primaryCode, int[] keyCodes) {
         InputConnection inputConnection = getCurrentInputConnection();
-        if (inputConnection != null) {
-            switch (primaryCode) {
-                case Keyboard.KEYCODE_DELETE:
-                    CharSequence selectedText = inputConnection.getSelectedText(0);
-                    if (TextUtils.isEmpty(selectedText)) {
-                        inputConnection.deleteSurroundingText(1, 0);
-                    } else {
-                        inputConnection.commitText("", 1);
-                    }
-                    break;
-                case Keyboard.KEYCODE_DONE:
-                    inputConnection.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
-                    break;
-                case 901:
-                    moveLeft(inputConnection);
-                    break;
-                case 902:
-                    moveUp(inputConnection);
-                    break;
-                case 903:
-                    moveDown(inputConnection);
-                    break;
-                case 904:
-                    moveRight(inputConnection);
-                    break;
-                default:
-                    String textToPrint = getText(getResourceId(primaryCode, KEY_PREFIX)).toString();
-                    Log.d("code", textToPrint);
-                    inputConnection.commitText(textToPrint, 1);
-                    int pos = Integer.parseInt(getText(getResourceId(primaryCode, KEY_CUR_PREFIX)).toString());
-                    Log.d("Cursor moved", String.valueOf(pos));
-                    moveLeftNTimes(pos, inputConnection);
-            }
+        if (null == inputConnection)
+            return;
+
+        switch (primaryCode) {
+            case Keyboard.KEYCODE_DELETE:
+                CharSequence selectedText = inputConnection.getSelectedText(0);
+                if (TextUtils.isEmpty(selectedText)) {
+                    inputConnection.deleteSurroundingText(1, 0);
+                } else {
+                    inputConnection.commitText("", 1);
+                }
+                break;
+            case Keyboard.KEYCODE_DONE:
+                inputConnection.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
+                break;
+            case LEFT_KEYCODE:
+                moveLeft(inputConnection);
+                break;
+            case UP_KEYCODE:
+                moveUp(inputConnection);
+                break;
+            case DOWN_KEYCODE:
+                moveDown(inputConnection);
+                break;
+            case RIGHT_KEYCODE:
+                moveRight(inputConnection);
+                break;
+            default:
+                int resId = getResourceId(primaryCode, KEY_PREFIX);
+                /* Get code for key and position to move the cursor after code is pasted */
+                String[] res = getResources().getStringArray(resId);
+                String code = res[1];
+                Log.d("Code", code);
+                inputConnection.commitText(code, 1);
+                int pos = Integer.parseInt(res[0]);
+                Log.d("Cursor moved", String.valueOf(pos));
+                /*Position the cursor for user's input */
+                moveLeftNTimes(pos, inputConnection);
         }
     }
 
@@ -87,8 +95,8 @@ public class MyInputMethodService extends InputMethodService implements Keyboard
     }
 
     private int getResourceId(int primaryCode, String prefix) {
-        Log.d("key code", String.valueOf(primaryCode));
-        return getId(prefix + primaryCode, R.string.class);
+        Log.d("Key code", String.valueOf(primaryCode));
+        return getId(prefix + primaryCode, R.array.class);
     }
 
     private void moveLeft(InputConnection inputConnection) {
