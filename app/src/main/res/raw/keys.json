@@ -1,0 +1,168 @@
+[
+  {
+    "id": "c601",
+    "properties": {
+      "text": "for(;;){}",
+      "cursor": "6",
+      "suggestions": [
+        {
+          "display": "int i=0",
+          "keyCode": "801"
+        },
+        {
+          "display": "i++",
+          "keyCode": "802"
+        },
+        {
+          "display": "i--",
+          "keyCode": "803"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c602",
+    "properties": {
+      "text": "for(:){}",
+      "cursor": "5",
+      "suggestions": [
+        {
+          "display": "String",
+          "keyCode": "0"
+        },
+        {
+          "display": "str",
+          "keyCode": "0"
+        },
+        {
+          "display": "listName",
+          "keyCode": "0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c603",
+    "properties": {
+      "text": "while(){}",
+      "cursor": "4",
+      "suggestions": [
+        {
+          "display": "i==0",
+          "keyCode": "0"
+        },
+        {
+          "display": "i!=0",
+          "keyCode": "0"
+        },
+        {
+          "display": "i<0",
+          "keyCode": "0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c604",
+    "properties": {
+      "text": "do{}while()",
+      "cursor": "9",
+      "suggestions": [
+        {
+          "display": "i==0",
+          "keyCode": "0"
+        },
+        {
+          "display": "i!=0",
+          "keyCode": "0"
+        },
+        {
+          "display": "i<0",
+          "keyCode": "0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c701",
+    "properties": {
+      "text": "if(){}",
+      "cursor": "4",
+      "suggestions": [
+        {
+          "display": "i==0",
+          "keyCode": "0"
+        },
+        {
+          "display": "i!=0",
+          "keyCode": "0"
+        },
+        {
+          "display": "i<0",
+          "keyCode": "0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c702",
+    "properties": {
+      "text": "if(){}else{}",
+      "cursor": "12",
+      "suggestions": [
+        {
+          "display": "i==0",
+          "keyCode": "0"
+        },
+        {
+          "display": "i!=0",
+          "keyCode": "0"
+        },
+        {
+          "display": "i<0",
+          "keyCode": "0"
+        }
+      ]
+    }
+  },
+  {
+    "id": "c703",
+    "properties": {
+      "text": "switch(){default:}",
+      "cursor": "13",
+      "suggestions": []
+    }
+  },
+  {
+    "id": "c801",
+    "properties": {
+      "text": "int i=0",
+      "cursor": "0",
+      "suggestions": []
+    }
+  },
+  {
+    "id": "c802",
+    "properties": {
+      "text": "i++",
+      "cursor": "0",
+      "suggestions": []
+    }
+  },
+  {
+    "id": "c803",
+    "properties": {
+      "text": "i--",
+      "cursor": "0",
+      "suggestions": []
+    }
+  },
+  {
+    "id": "c0",
+    "properties": {
+      "text": "i==0",
+      "cursor": "0",
+      "suggestions": []
+    }
+  }
+]

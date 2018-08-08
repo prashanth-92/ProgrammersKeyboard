@@ -9,6 +9,17 @@
             for(;;){
             }
         </item>
+        <item name="suggestions-1">int i=0;</item>
+        <item name="suggestions-1-code">801</item>
+        <item name="suggestions-2">i++;</item>
+        <item name="suggestions-2-code">802</item>
+        <item name="suggestions-3">i--;</item>
+        <item name="suggestions-3-code">803</item>
+    </string-array>
+    <string-array name="suggestionsc601">
+        <item name="suggestions-1">int i=0;</item>
+        <item name="suggestions-2">i++;</item>
+        <item name="suggestions-3">i--;</item>
     </string-array>
     <string-array name="c602">
         <item name="cursorPosition">

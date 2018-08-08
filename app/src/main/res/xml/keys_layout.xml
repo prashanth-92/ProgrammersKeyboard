@@ -2,27 +2,41 @@
 <Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
     android:horizontalGap="3px"
     android:keyBackground="@color/colorPrimaryDark"
-    android:keyHeight="60dp"
+    android:keyHeight="35dp"
     android:keyTextColor="@color/colorAccent"
     android:keyWidth="10%p"
     android:verticalGap="3px">
     <Row>
         <Key
+            android:codes="0"
+            android:keyLabel=""
+            android:keyWidth="33%p"></Key>
+        <Key
+            android:codes="0"
+            android:keyLabel=""
+            android:keyWidth="34%p"></Key>
+        <Key
+            android:codes="0"
+            android:keyLabel=""
+            android:keyWidth="33%p"></Key>
+    </Row>
+    <Row>
+        <Key
             android:codes="901"
             android:keyEdgeFlags="left"
-            android:keyIcon="@drawable/left"
+            android:keyIcon="@drawable/left_w_1x"
             android:keyWidth="20%p"></Key>
         <Key
             android:codes="902"
-            android:keyIcon="@drawable/up"
+            android:keyIcon="@drawable/up_w_1x"
             android:keyWidth="20%p"></Key>
         <Key
             android:codes="903"
-            android:keyIcon="@drawable/down"
+            android:keyIcon="@drawable/down_w_1x"
             android:keyWidth="20%p"></Key>
         <Key
             android:codes="904"
-            android:keyIcon="@drawable/right"
+            android:keyIcon="@drawable/right_w_1x"
             android:keyWidth="20%p"></Key>
         <Key
             android:codes="-5"
@@ -67,30 +81,17 @@
             android:keyLabel="switch()"
             android:keyWidth="30%p"></Key>
     </Row>
-    <Row>
-        <Key
-            android:codes="801"
-            android:keyEdgeFlags="left"
-            android:keyLabel="int i=0"></Key>
-        <Key
-            android:codes="802"
-            android:keyLabel="i++"></Key>
-        <Key
-            android:codes="803"
-            android:keyEdgeFlags="right"
-            android:keyLabel="i--"></Key>
-    </Row>
     <Row android:rowEdgeFlags="bottom">
         <Key
             android:codes="32"
             android:isRepeatable="true"
-            android:keyLabel="SPACE"
+            android:keyLabel="Space"
             android:keyWidth="60%p" />
         <Key
             android:codes="-4"
             android:keyBackground="@color/colorPrimary"
             android:keyEdgeFlags="right"
-            android:keyLabel="Done"
+            android:keyLabel="Enter"
             android:keyWidth="20%p" />
     </Row>
 </Keyboard>
